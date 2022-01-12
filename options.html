@@ -7,26 +7,25 @@
         .img-container {
             text-align: center;
         }
-        .left-container {
-            text-align: left;
-        }
         .center-container {
             text-align: center;
         }
-        .right-container {
-            text-align: right;
+        .alignleft {
+	        float: left;
+        }
+        .alightcenter {
+	        float: center;
+        }
+        .alignright {
+	        float: right;
         }
       </style>
     <body>
-        <div class="left-container"> <!-- Block parent element -->
-            <h1>Memes</h1>
-        </div>
-        <div class="center-container"> <!-- Block parent element -->
-            <h1>Pictures</h1>
-        </div>
-        <div class="right-container"> <!-- Block parent element -->
-            <h1>Videos</h1>
-        </div>
+        <div id="textbox">
+            <h1 class="alignleft">Memes</h1>
+            <h1 class="aligncenter">Pictures</h1>
+            <h1 class="alignright">Videos</h1>
+          </div>
         <div class="img-container"> <!-- Block parent element -->
             <a href="photos.html"><img src="https://pbs.twimg.com/media/FE5Pi6sX0AMTuBQ?format=jpg&name=large" alt="Roma Montagov and Juliette Cai" width="500" height="350"></a>
         </div>
