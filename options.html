@@ -48,13 +48,20 @@
             clear: both;
             display: table;
         }
-        .container { 
-            width:50%; 
-            margin:0 auto; 
-            text-align:center}
-        .container span { 
-            width:30%; 
-            margin:0 1%;  
+        div {
+            text-align: justify;
+        }
+
+        div img {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+
+        div:after {
+            content: '';
+            display: inline-block;
+            width: 100%;
         }
       </style>
     <body>
@@ -63,20 +70,14 @@
             <h1 class="aligncenter">Pictures</h1>
             <h1 class="alignright">Videos</h1>
         </div>
-        <div class="container">
-            <span>
-                <a href="photos.html"><img src="https://c.tenor.com/Q8iB1LY2jB4AAAAM/teletubbies-crazy-dance.gif" width="380" height="280"></a>
-            </span>
-            <span>
-                <a href="photos.html"><img src="https://pbs.twimg.com/media/FE5Pi6sX0AMTuBQ?format=jpg&name=large" alt="Roma Montagov and Juliette Cai" width="380" height="280"></a>
-            </span>
-            <span>
-                <a href="photos.html">
-                    <video controls width="270" height="280">
-                        <source src="harryosbourn.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-                    </video>
-                </a>
-            </span>
+        <div>
+            <a href="photos.html"><img src="https://c.tenor.com/Q8iB1LY2jB4AAAAM/teletubbies-crazy-dance.gif" width="380" height="280"></a>
+            <a href="photos.html"><img src="https://pbs.twimg.com/media/FE5Pi6sX0AMTuBQ?format=jpg&name=large" alt="Roma Montagov and Juliette Cai" width="380" height="280"></a>
+            <a href="photos.html">
+                <video controls width="270" height="280">
+                    <source src="harryosbourn.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
+                </video>
+            </a>
         </div>
         <!--<div class="row">
             <div class="column">
