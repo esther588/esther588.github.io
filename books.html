@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Matcha and Books</title>
+        <title>Matcha and More</title>
         <style>
             /* Add a black background color to the top navigation */
             .topnav {
@@ -31,15 +31,76 @@
                 margin: 20px;
                 background-color: #A6CF98;
             }
+            .center-container {
+            text-align: center;
+        }
+        .alignleft {
+            float: left;
+            width: 33.3333333%;
+            text-align: left;
+        }
+        .aligncenter {
+            float: left;
+            width: 33.3333333%;
+            text-align: center;
+        }
+        .alignright {
+            float: left;
+            width: 33.3333333%;
+            text-align: right;
+        }
+        .textleft {
+            float: left;
+            width: 33.3333333%;
+            text-align: left;
+        }
+        .textcenter {
+            float: left;
+            width: 35%;
+            text-align: center;
+        }
+        .textright {
+            float: left;
+            width: 30%;
+            text-align: right;
+        }
+        div {
+            text-align: justify;
+        }
+        div img {
+            display: inline-block;
+        }
+        div:after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+        }
         </style>
     </head>
     <body style="background-color: #557C55;">
         <div class="container">
             <div class="topnav">
                 <a href="#home">Home</a>
+                <a href="#gifs">Gifs/Memes</a>
+                <a href="#books">Book Recs</a>
+                <a href="#photos">Pictures</a>
+                <a href="#videos">Videos</a>
                 <a href="#about">About</a>
-                <a href="#contact">Contact</a>
             </div>
+        </div>
+        <div>
+            <a href="gifs.html"><img src="https://c.tenor.com/Q8iB1LY2jB4AAAAM/teletubbies-crazy-dance.gif" width="420" height="320"></a>
+            <a href="books.html"><img src="https://pbs.twimg.com/media/FE5Pi6sX0AMTuBQ?format=jpg&name=large" alt="Roma Montagov and Juliette Cai" width="420" height="320"></a>
+            <a href="videos.html">
+                <video controls width="410" height="320">
+                    <source src="videos/harryosbourn.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
+                </video>
+            </a>
+        </div>
+        <div class="center-container"> <!-- Block parent element -->
+            <p class="alignleft" style="font-size:15px">Yellow Teletubby dancing in a tutu.</p>
+            <p class="aligncenter" style="font-size:15px">Roma Montagov and Juliette Cai from These Violent Delights and Our Violent Ends. Both by Chloe Gong.</p>
+            <p class="alignright" style="font-size:15px">Fancam of James Franco as Harry Osbourn from Spiderman.</p>
         </div>
     </body>
 </html>
