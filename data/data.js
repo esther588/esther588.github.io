@@ -3,6 +3,7 @@ const response = await fetch(url);
 const result = await response.json();
 for (let i in result) {
     languagesPercentage = getLanguagePercentage(result[i].name);
+    createElement(result[i].name);
     displayGraph(result[i].name, languagesPercentage);
 }
 
@@ -24,6 +25,11 @@ function getLanguagePercentage(repoName) {
     return languagesPercentage;
 }
 
+function createElement(repoName) {
+    var divElem = document.createElement("div");
+    divElem.id = repoName+ "Container";
+}
+
 function displayGraph(repoName, percentageObj) {
     var xValues = Object.keys(percentageObj);
     var colors = [
@@ -32,9 +38,10 @@ function displayGraph(repoName, percentageObj) {
         "#D7A86E",
         "#FFEBC1"
     ];
+
     html = '';
 
-    document.getElementById("graphContainer").innerHTML = '&nbsp;';
+    document.getElementById(repoName+ "Container").innerHTML = '&nbsp;';
 
     html += '<canvas id="' + repoName + 'Pie" style="width:100%;max-width:600px"></canvas>';
 
