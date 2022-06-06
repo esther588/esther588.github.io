@@ -19,7 +19,7 @@ a:hover {
   z-index: 10;
 }
 
-.navbar-container {
+.navbar--container {
   top: 15%;
   background: #ffffff;
   height: 220px;
@@ -28,23 +28,23 @@ a:hover {
           box-shadow: 2px 2px 15px rgba(51, 51, 51, 0.1);
 }
 
-.navbar-icon {
+.navbar--icon {
   margin-top: 24px;
   margin-left: 49px;
   font-size: 1em;
 }
 
-.navbar-icon:hover {
+.navbar--icon:hover {
   color: #92BFB1;
   cursor: pointer;
 }
 
-.navbar-title {
+.navbar--title {
   margin-left: 27px;
   margin-top: 35px;
 }
 
-.navbar-title h4 {
+.navbar--title h4 {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -65,22 +65,22 @@ a:hover {
           box-shadow: 2px 2px 15px rgba(51, 51, 51, 0.1);
 }
 
-.nav-open-icon {
+.nav--open-icon {
   text-align: right;
   padding: 20px;
 }
 
-.nav-open-icon i {
+.nav--open-icon i {
   font-size: 1.8em;
   color: #92BFB1;
 }
 
-.nav-open-icon i:hover {
+.nav--open-icon i:hover {
   color: #333333;
   cursor: pointer;
 }
 
-.nav-open-title {
+.nav--open-title {
   font-family: "Playfair Display", serif;
   font-size: .8em;
   text-transform: uppercase;
@@ -89,7 +89,7 @@ a:hover {
   margin-top: 35%;
 }
 
-.nav-open-menu {
+.nav--open-menu {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,7 +102,7 @@ a:hover {
   margin-top: 30px;
 }
 
-.nav-open-menu a {
+.nav--open-menu a {
   font-size: 2em;
   font-weight: 100;
   font-family: "Playfair Display", serif;
