@@ -11,15 +11,6 @@ close.addEventListener('click', function() {
   menu.classList.toggle('close');
 })
 
-const url = "https://api.github.com/users/esther588/repos";
-const response = await fetch(url);
-const result = await response.json();
-for (let i in result) {
-    languagesPercentage = getLanguagePercentage(result[i].name);
-    createElement(result[i].name);
-    //displayGraph(result[i].name, languagesPercentage);
-}
-
 function getLanguagePercentage(repoName) {
     const ls = await fetch("https://api.github.com/repos/" + repoName + "/languages");
     const languageStats = await ls.json();
