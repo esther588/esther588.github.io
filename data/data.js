@@ -33,12 +33,14 @@ function createElement(repoName) {
 
 function displayGraph(repoName, percentageObj) {
     var xValues = Object.keys(percentageObj);
+    var yValues = Object.values(percentageObj);
     var colors = [
         "#8E3200",
         "#A64B2A",
         "#D7A86E",
         "#FFEBC1"
     ];
+    var title = repoName;
 
     html = '';
 
