@@ -16,7 +16,7 @@ function getLanguagePercentage(repoName) {
         totalPts += pts;
     });
 
-    const languagesPercentage = [];
+    const languagesPercentage = {};
     Object.keys(languageStats).forEach((language) => {
         languagesPercentage[language] = (languageStats[language] * 100) / totalPts;
     });
@@ -32,7 +32,7 @@ var colors = [
     "#FFEBC1"
 ];
 
-function displayGraph(repoName, percentageArr) {
+function displayGraph(repoName, percentageObj) {
     html = '';
 
     document.getElementById("graphContainer").innerHTML = '&nbsp;';
