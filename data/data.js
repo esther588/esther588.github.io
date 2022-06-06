@@ -1,4 +1,3 @@
-document.getElementById("graphs").innerHTML = "hello";
 const url = "https://api.github.com/users/esther588/repos";
 const response = await fetch(url);
 const result = await response.json();
