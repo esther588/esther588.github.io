@@ -24,15 +24,14 @@ function getLanguagePercentage(repoName) {
     return languagesPercentage;
 }
 
-var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-var colors = [
-    "#8E3200",
-    "#A64B2A",
-    "#D7A86E",
-    "#FFEBC1"
-];
-
 function displayGraph(repoName, percentageObj) {
+    var xValues = Object.keys(percentageObj);
+    var colors = [
+        "#8E3200",
+        "#A64B2A",
+        "#D7A86E",
+        "#FFEBC1"
+    ];
     html = '';
 
     document.getElementById("graphContainer").innerHTML = '&nbsp;';
