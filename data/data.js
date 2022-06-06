@@ -3,6 +3,7 @@ const response = await fetch(url);
 const result = await response.json();
 for (let i in result) {
     languagesPercentage = getLanguagePercentage(result[i].name);
+    displayGraph(languagesPercentage);
 }
 
 function getLanguagePercentage(repoName) {
@@ -15,10 +16,14 @@ function getLanguagePercentage(repoName) {
         totalPts += pts;
     });
 
-    const languagesPercentage = {};
+    const languagesPercentage = [];
     Object.keys(languageStats).forEach((language) => {
         languagesPercentage[language] = (languageStats[language] * 100) / totalPts;
     });
 
     return languagesPercentage;
-  }
+}
+
+function displayGraph(percentageArr) {
+
+}
