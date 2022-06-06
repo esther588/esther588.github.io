@@ -4,7 +4,7 @@ const result = await response.json();
 for (let i in result) {
     languagesPercentage = getLanguagePercentage(result[i].name);
     createElement(result[i].name);
-    displayGraph(result[i].name, languagesPercentage);
+    //displayGraph(result[i].name, languagesPercentage);
 }
 
 function getLanguagePercentage(repoName) {
@@ -27,7 +27,8 @@ function getLanguagePercentage(repoName) {
 
 function createElement(repoName) {
     var divElem = document.createElement("div");
-    divElem.id = repoName+ "Container";
+    divElem.id = repoName + "Container";
+    divElem.innerHTML = repoName;
     document.getElementById("graphs").appendChild(divElem);
 }
 
@@ -44,7 +45,7 @@ function displayGraph(repoName, percentageObj) {
 
     html = '';
 
-    document.getElementById(repoName+ "Container").innerHTML = '&nbsp;';
+    document.getElementById(repoName + "Container").innerHTML = '&nbsp;';
 
     html += '<canvas id="' + repoName + 'Pie" style="width:100%;max-width:600px"></canvas>';
 
