@@ -28,6 +28,7 @@ function getLanguagePercentage(repoName) {
 function createElement(repoName) {
     var divElem = document.createElement("div");
     divElem.id = repoName+ "Container";
+    document.getElementById("graphs").appendChild(divElem);
 }
 
 function displayGraph(repoName, percentageObj) {
