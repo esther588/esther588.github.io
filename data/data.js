@@ -29,14 +29,6 @@ var colors = [
     "#8E3200",
     "#A64B2A",
     "#D7A86E",
-    "#FFEBC1",
-    "#8E3200",
-    "#A64B2A",
-    "#D7A86E",
-    "#FFEBC1",
-    "#8E3200",
-    "#A64B2A",
-    "#D7A86E",
     "#FFEBC1"
 ];
 
@@ -56,14 +48,14 @@ function displayGraph(repoName, percentageArr) {
         data: {
             labels: xValues,
             datasets: [{
-            backgroundColor: acneColors,
-            data: acneValues
+            backgroundColor: colors,
+            data: yValues
             }]
         },
         options: {
             title: {
             display: true,
-            text: acneTitle
+            text: title
             }
         }
     });
