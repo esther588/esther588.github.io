@@ -80,15 +80,6 @@ a:hover {
   cursor: pointer;
 }
 
-.nav--open-title {
-  font-family: "Playfair Display", serif;
-  font-size: .8em;
-  text-transform: uppercase;
-  letter-spacing: .2em;
-  text-align: center;
-  margin-top: 35%;
-}
-
 .nav--open-menu {
   height: 100%;
   display: -webkit-box;
