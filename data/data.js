@@ -3,7 +3,7 @@ async function func() {
     const response = await fetch(url);
     const result = await response.json();
     for (let i in result) {
-        console.log(result[i].name);
+        createElement(result[i].name);
     }
 }
 
