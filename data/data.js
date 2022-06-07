@@ -4,8 +4,8 @@ async function func() {
     const url = "https://api.github.com/users/esther588/repos";
     const response = await fetch(url);
     const result = await response.json();
-    document.getElementById("graphs").innerHTML = "hello";
     for (let i in result) {
+        document.getElementById("graphs").innerHTML = "hello";
         createElement(result[i].name);
     }
 }
