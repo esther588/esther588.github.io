@@ -14,6 +14,8 @@ function createElement(repoName) {
     document.getElementById("graphs").appendChild(divElem);
 }
 
+func();
+
 function getLanguagePercentage(repoName) {
     const ls = await fetch("https://api.github.com/repos/" + repoName + "/languages");
     const languageStats = await ls.json();
@@ -31,5 +33,3 @@ function getLanguagePercentage(repoName) {
 
     return languagesPercentage;
 }
-
-func();
