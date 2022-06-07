@@ -1,12 +1,13 @@
-const url = "https://api.github.com/users/esther588/repos";
-const response = await fetch(url);
-const result = await response.json();
-var namesArr = result.items.map(item => item.name);
-for (let i in namesArr) {
-    languagesPercentage = getLanguagePercentage(namesArr[i]);
-    createElement(namesArr[i]);
-    //displayGraph(result[i].name, languagesPercentage);
+async function func() {
+    const url = "https://api.github.com/users/esther588/repos";
+    const response = await fetch(url);
+    const result = await response.json();
+    for (let i in result) {
+        console.log(result[i].name);
+    }
 }
+
+func();
 
 function getLanguagePercentage(repoName) {
     const ls = await fetch("https://api.github.com/repos/" + repoName + "/languages");
