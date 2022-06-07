@@ -14,4 +14,22 @@ function createElement(repoName) {
     document.getElementById("graphs").appendChild(divElem);
 }
 
+function getLanguagePercentage(repoName) {
+    const ls = await fetch("https://api.github.com/repos/" + repoName + "/languages");
+    const languageStats = await ls.json();
+
+    const totalPtsArr = Object.values(languageStats);
+    var totalPts = 0;
+    totalPtsArr.forEach((pts) => {
+        totalPts += pts;
+    });
+
+    const languagesPercentage = {};
+    Object.keys(languageStats).forEach((language) => {
+        languagesPercentage[language] = (languageStats[language] * 100) / totalPts;
+    });
+
+    return languagesPercentage;
+}
+
 func();
