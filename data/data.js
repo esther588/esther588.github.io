@@ -1,9 +1,10 @@
 const url = "https://api.github.com/users/esther588/repos";
 const response = await fetch(url);
 const result = await response.json();
-for (let i in result) {
-    languagesPercentage = getLanguagePercentage(result[i].name);
-    createElement(result[i].name);
+var namesArr = result.items.map(item => item.name);
+for (let i in namesArr) {
+    languagesPercentage = getLanguagePercentage(namesArr[i]);
+    createElement(namesArr[i]);
     //displayGraph(result[i].name, languagesPercentage);
 }
 
