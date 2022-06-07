@@ -1,4 +1,11 @@
-document.getElementById("graphs").innerHTML = "hello";
+const url = "https://api.github.com/users/esther588/repos";
+const response = await fetch(url);
+const result = await response.json();
+for (let i in result) {
+    languagesPercentage = getLanguagePercentage(result[i].name);
+    createElement(result[i].name);
+    //displayGraph(result[i].name, languagesPercentage);
+}
 
 function getLanguagePercentage(repoName) {
     const ls = await fetch("https://api.github.com/repos/" + repoName + "/languages");
@@ -21,7 +28,7 @@ function getLanguagePercentage(repoName) {
 function createElement(repoName) {
     var divElem = document.createElement("div");
     divElem.id = repoName + "Container";
-    divElem.innerHTML = repoName;
+    divElem.innerHTML = "hello";
     document.getElementById("graphs").appendChild(divElem);
 }
 
