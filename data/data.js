@@ -1,3 +1,5 @@
+func();
+
 async function func() {
     const url = "https://api.github.com/users/esther588/repos";
     const response = await fetch(url);
@@ -14,4 +16,3 @@ function createElement(repoName) {
     document.getElementById("graphs").appendChild(divElem);
 }
 
-func();
