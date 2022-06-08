@@ -4,8 +4,8 @@ async function func() {
   const result = await response.json();
   for (let i in result) {
         createElement(result[i].name);
-        var languagesPercentage = getLanguagePercentage(repoName);
-        displayGraph(repoName, languagesPercentage)
+        var languagesPercentage = getLanguagePercentage(result[i].name);
+        displayGraph(result[i].name, languagesPercentage);
     }
 }
 
