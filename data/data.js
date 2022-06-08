@@ -19,7 +19,7 @@ function createElement(repoName) {
 func();
 
 async function getLanguagePercentage(repoName) {
-    const ls = await fetch("https://api.github.com/repos/" + repoName + "/languages");
+    const ls = await fetch("https://api.github.com/repos/esther588/" + repoName + "/languages");
     const languageStats = await ls.json();
 
     const totalPtsArr = Object.values(languageStats);
