@@ -4,7 +4,7 @@ async function func() {
   const result = await response.json();
   for (let i in result) {
         createElement(result[i].name);
-        var languagesPercentage = getLanguagePercentage(result[i].name);
+        var languagesPercentage = await getLanguagePercentage(result[i].name);
         displayGraph(result[i].name, languagesPercentage);
     }
 }
@@ -32,7 +32,6 @@ async function getLanguagePercentage(repoName) {
     Object.keys(languageStats).forEach((language) => {
         languagesPercentage[language] = (languageStats[language] * 100) / totalPts;
     });
-
     return languagesPercentage;
 }
 
