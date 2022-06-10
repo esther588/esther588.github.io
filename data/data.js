@@ -61,17 +61,17 @@ function chooseColors(repoName, index) {
             "#363062"
     ];
     if((index + 1) % 1 == 0) {
-        const jsonAr = JSON.stringify(colors1);
-        localStorage.setItem(repoName + " colors", jsonAr);
+        const jsonArr = JSON.stringify(colors1);
+        localStorage.setItem(repoName + " colors", jsonArr);
     } else if(((index + 1) % 2) == 0) {
-        const jsonAr = JSON.stringify(colors2);
-        localStorage.setItem(repoName + " colors", jsonAr);
+        const jsonArr = JSON.stringify(colors2);
+        localStorage.setItem(repoName + " colors", jsonArr);
     } else if(((index + 1) % 3) == 0) {
-        const jsonAr = JSON.stringify(colors3);
-        localStorage.setItem(repoName + " colors", jsonAr);
+        const jsonArr = JSON.stringify(colors3);
+        localStorage.setItem(repoName + " colors", jsonArr);
     } else if(((index + 1) % 4) == 0) {
-        const jsonAr = JSON.stringify(colors4);
-        localStorage.setItem(repoName + " colors", jsonAr);
+        const jsonArr = JSON.stringify(colors4);
+        localStorage.setItem(repoName + " colors", jsonArr);
     }
 }
 
