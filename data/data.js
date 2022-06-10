@@ -50,7 +50,7 @@ function displayGraph(repoName, percentageObj) {
 
     document.getElementById(repoName + "Container").innerHTML = '&nbsp;';
 
-    html += '<canvas id="' + repoName + 'Pie" style="width:100%;max-width:600px"></canvas>';
+    html += '<section><canvas id="' + repoName + 'Pie" style="width:100%;max-width:600px"></canvas></section>';
 
     document.getElementById(repoName + "Container").innerHTML = html;
 
