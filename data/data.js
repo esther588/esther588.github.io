@@ -2,16 +2,21 @@ async function func() {
     const url = "https://api.github.com/users/esther588/repos";
     const response = await fetch(url);
     const result = await response.json();
-    var index = 0;
+    var colorIndex = 0, sectionIndex = 0;
     for (let i in result) {
         createElement(result[i].name);
         var languagesPercentage = await getLanguagePercentage(result[i].name);
-        chooseColors(result[i].name, index);
-        displayGraph(result[i].name, languagesPercentage, index);
-        if(index == 3) {
-            index = 0;
+        chooseColors(result[i].name, colorIndex);
+        displayGraph(result[i].name, languagesPercentage, sectionIndex);
+        if(colorIndex == 3) {
+            colorIndex = 0;
         } else {
-            index++;
+            colorIndex++;
+        }
+        if(sectionIndex == 2) {
+            sectionIndex = 0;
+        } else {
+            sectionIndex++;
         }
     }
 }
@@ -93,7 +98,7 @@ function displayGraph(repoName, percentageObj, index) {
 
     document.getElementById(repoName + "Container").innerHTML = '&nbsp;';
 
-    if(index == 0 || index == 3) {
+    if(index == 0) {
         html += '<section><canvas id="' + repoName + 'Pie" style="width:100%;max-width:600px"></canvas></section>';
     } else if(index == 1) {
         html += '<section class="two"><canvas id="' + repoName + 'Pie" style="width:100%;max-width:600px"></canvas></section>';
