@@ -12,7 +12,6 @@ async function func() {
 function createElement(repoName) {
     var divElem = document.createElement("div");
     divElem.id = repoName + "Container";
-    divElem.innerHTML = repoName;
     document.getElementById("graphs").appendChild(divElem);
 }
 
