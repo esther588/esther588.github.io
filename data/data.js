@@ -1,12 +1,18 @@
 async function func() {
     const url = "https://api.github.com/users/esther588/repos";
     const response = await fetch(url);
-  const result = await response.json();
-  for (let i in result) {
+    const result = await response.json();
+    var index = 0;
+    for (let i in result) {
         createElement(result[i].name);
         var languagesPercentage = await getLanguagePercentage(result[i].name);
-        chooseColors(result[i].name, i);
+        chooseColors(result[i].name, index);
         displayGraph(result[i].name, languagesPercentage);
+        if(index == 3) {
+            index = 0;
+        } else {
+            index++;
+        }
     }
 }
 
@@ -55,21 +61,21 @@ function chooseColors(repoName, index) {
         "#EDE6DB"
     ];
     var colors4 = [
-            "#E9D5DA",
-            "#827397",
-            "#4D4C7D",
-            "#363062"
+        "#E9D5DA",
+        "#827397",
+        "#4D4C7D",
+        "#363062"
     ];
-    if((index + 1) % 1 == 0) {
+    if(index == 0) {
         const jsonArr = JSON.stringify(colors1);
         localStorage.setItem(repoName + " colors", jsonArr);
-    } else if(((index + 1) % 2) == 0) {
+    } else if(index == 1) {
         const jsonArr = JSON.stringify(colors2);
         localStorage.setItem(repoName + " colors", jsonArr);
-    } else if(((index + 1) % 3) == 0) {
+    } else if(index == 2) {
         const jsonArr = JSON.stringify(colors3);
         localStorage.setItem(repoName + " colors", jsonArr);
-    } else if(((index + 1) % 4) == 0) {
+    } else if(index == 3) {
         const jsonArr = JSON.stringify(colors4);
         localStorage.setItem(repoName + " colors", jsonArr);
     }
