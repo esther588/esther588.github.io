@@ -60,16 +60,16 @@ function chooseColors(repoName, index) {
             "#4D4C7D",
             "#363062"
     ];
-    if((i + 1) % 1 == 0) {
+    if((index + 1) % 1 == 0) {
         const jsonAr = JSON.stringify(colors1);
         localStorage.setItem(repoName + " colors", jsonAr);
-    } else if((i % 2) == 0) {
+    } else if((index % 2) == 0) {
         const jsonAr = JSON.stringify(colors2);
         localStorage.setItem(repoName + " colors", jsonAr);
-    } else if((i % 3) == 0) {
+    } else if((index % 3) == 0) {
         const jsonAr = JSON.stringify(colors3);
         localStorage.setItem(repoName + " colors", jsonAr);
-    } else if((i % 4) == 0) {
+    } else if((index % 4) == 0) {
         const jsonAr = JSON.stringify(colors4);
         localStorage.setItem(repoName + " colors", jsonAr);
     }
