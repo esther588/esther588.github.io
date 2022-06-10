@@ -78,6 +78,8 @@ function chooseColors(repoName, index) {
 function displayGraph(repoName, percentageObj) {
     var xValues = Object.keys(percentageObj);
     var yValues = Object.values(percentageObj);
+    const strColors = localStorage.getItem(repoName + " colors");
+    var colors = JSON.parse(strColors);
     var title = repoName;
 
     html = '';
