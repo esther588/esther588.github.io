@@ -1,3 +1,15 @@
+let open = document.querySelector('.navbar--icon');
+let menu = document.querySelector('.nav--open');
+let close = document.querySelector('.nav--open-icon');
+
+open.addEventListener('click', function() {
+  menu.classList.toggle('close');
+});
+
+close.addEventListener('click', function() {
+  menu.classList.toggle('close');
+})
+
 async function func() {
     const url = "https://api.github.com/users/esther588/repos";
     const response = await fetch(url);
