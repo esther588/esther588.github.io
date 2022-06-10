@@ -7,7 +7,7 @@ async function func() {
         createElement(result[i].name);
         var languagesPercentage = await getLanguagePercentage(result[i].name);
         chooseColors(result[i].name, index);
-        displayGraph(result[i].name, languagesPercentage);
+        displayGraph(result[i].name, languagesPercentage, index);
         if(index == 3) {
             index = 0;
         } else {
@@ -81,7 +81,7 @@ function chooseColors(repoName, index) {
     }
 }
 
-function displayGraph(repoName, percentageObj) {
+function displayGraph(repoName, percentageObj, index) {
     var xValues = Object.keys(percentageObj);
     var yValues = Object.values(percentageObj);
     const strColors = localStorage.getItem(repoName + " colors");
@@ -92,7 +92,13 @@ function displayGraph(repoName, percentageObj) {
 
     document.getElementById(repoName + "Container").innerHTML = '&nbsp;';
 
-    html += '<section><canvas id="' + repoName + 'Pie" style="width:100%;max-width:600px"></canvas></section>';
+    if(index == 0 || index == 3) {
+        html += '<section><canvas id="' + repoName + 'Pie" style="width:100%;max-width:600px"></canvas></section>';
+    } else if(index == 1) {
+        html += '<section class="two"><canvas id="' + repoName + 'Pie" style="width:100%;max-width:600px"></canvas></section>';
+    } else if(index == 2) {
+        html += '<section class="three"><canvas id="' + repoName + 'Pie" style="width:100%;max-width:600px"></canvas></section>';
+    }
 
     document.getElementById(repoName + "Container").innerHTML = html;
 
