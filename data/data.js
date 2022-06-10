@@ -36,7 +36,8 @@ async function getLanguagePercentage(repoName) {
 
     const languagesPercentage = {};
     Object.keys(languageStats).forEach((language) => {
-        languagesPercentage[language] = (languageStats[language] * 100) / totalPts;
+        const percent = (languageStats[language] * 100) / totalPts;
+        languagesPercentage[language] = percent.toFixed(2);
     });
     return languagesPercentage;
 }
