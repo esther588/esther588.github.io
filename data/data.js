@@ -5,6 +5,7 @@ async function func() {
   for (let i in result) {
         createElement(result[i].name);
         var languagesPercentage = await getLanguagePercentage(result[i].name);
+        chooseColors(result[i].name, i);
         displayGraph(result[i].name, languagesPercentage);
     }
 }
@@ -34,15 +35,49 @@ async function getLanguagePercentage(repoName) {
     return languagesPercentage;
 }
 
-function displayGraph(repoName, percentageObj) {
-    var xValues = Object.keys(percentageObj);
-    var yValues = Object.values(percentageObj);
-    var colors = [
+function chooseColors(repoName, index) {
+    var colors1 = [
         "#8E3200",
         "#A64B2A",
         "#D7A86E",
         "#FFEBC1"
     ];
+    var colors2 = [
+        "#4E944F",
+        "#83BD75",
+        "#B4E197",
+        "#E9EFC0"
+    ];
+    var colors3 = [
+        "#1A3C40",
+        "#1D5C63",
+        "#417D7A",
+        "#EDE6DB"
+    ];
+    var colors4 = [
+            "#E9D5DA",
+            "#827397",
+            "#4D4C7D",
+            "#363062"
+    ];
+    if((i + 1) % 1 == 0) {
+        const jsonAr = JSON.stringify(colors1);
+        localStorage.setItem(repoName + " colors", jsonAr);
+    } else if((i % 2) == 0) {
+        const jsonAr = JSON.stringify(colors2);
+        localStorage.setItem(repoName + " colors", jsonAr);
+    } else if((i % 3) == 0) {
+        const jsonAr = JSON.stringify(colors3);
+        localStorage.setItem(repoName + " colors", jsonAr);
+    } else if((i % 4) == 0) {
+        const jsonAr = JSON.stringify(colors4);
+        localStorage.setItem(repoName + " colors", jsonAr);
+    }
+}
+
+function displayGraph(repoName, percentageObj) {
+    var xValues = Object.keys(percentageObj);
+    var yValues = Object.values(percentageObj);
     var title = repoName;
 
     html = '';
