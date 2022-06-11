@@ -41,11 +41,11 @@ function displaySection(repoName, index) {
     document.getElementById(repoName + "Container").innerHTML = '&nbsp;';
 
     if(index == 0) {
-        html += '<section><a class="underline" target="_blank" href="https://github.com/esther588/' + repoName + '">' + repoName + '</a></section>';
+        html += '<section><h1><a class="underline" target="_blank" href="https://github.com/esther588/' + repoName + '">' + repoName + '</a></h1></section>';
     } else if(index == 1) {
-        html += '<section class="two"><a class="underline" target="_blank" href="https://github.com/esther588/' + repoName + '">' + repoName + '</a></section>';
+        html += '<section class="two"><h1><a class="underline" target="_blank" href="https://github.com/esther588/' + repoName + '">' + repoName + '</a></h1></section>';
     } else if(index == 2) {
-        html += '<section class="three"><a class="underline" target="_blank" href="https://github.com/esther588/' + repoName + '">' + repoName + '</a></section>';
+        html += '<section class="three"><h1><a class="underline" target="_blank" href="https://github.com/esther588/' + repoName + '">' + repoName + '</a></h1></section>';
     }
 
     document.getElementById(repoName + "Container").innerHTML = html;
