@@ -150,7 +150,11 @@ h1 span {
 }
 
 .light {
-  color: #b2d2c8;
+    color: #b2d2c8;
+}
+
+.dark {
+    color: #98b3aa;
 }
 
 .underline {
