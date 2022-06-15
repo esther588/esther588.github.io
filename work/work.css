@@ -6,7 +6,6 @@ body {
 
 a {
   text-decoration: none;
-  color: #ffffff;
 }
 
 a:hover {
@@ -127,11 +126,11 @@ section {
 }
 
 .two {
-  background: #8fbdaf;
+    color: #92BFB1;
 }
 
 .three {
-  background: #72ac9a;
+    background: #72ac9a;
 }
 
 h1 {
