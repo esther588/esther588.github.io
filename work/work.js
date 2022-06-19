@@ -17,7 +17,7 @@ async function func() {
     var sectionIndex = 0;
     for (let i in result) {
         createElement(result[i].name);
-        var repoDescription = getDescription(result[i].name);
+        var repoDescription = await getDescription(result[i].name);
         displaySection(result[i].name, sectionIndex, repoDescription);
         if(sectionIndex == 2) {
             sectionIndex = 0;
