@@ -18,6 +18,7 @@ async function func() {
     for (let i in result) {
         createElement(result[i].name);
         displaySection(result[i].name, sectionIndex);
+        var repoDescription = getDescription(result[i].name);
         if(sectionIndex == 2) {
             sectionIndex = 0;
         } else {
@@ -33,6 +34,13 @@ function createElement(repoName) {
 }
 
 func();
+
+async function getDescription(repoName) {
+    const ls = await fetch("https://api.github.com/repos/esther588/" + repoName);
+    const result = await ls.json();
+
+    return result.description;
+}
 
 function displaySection(repoName, index) {
 
