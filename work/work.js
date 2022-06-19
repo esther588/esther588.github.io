@@ -17,8 +17,8 @@ async function func() {
     var sectionIndex = 0;
     for (let i in result) {
         createElement(result[i].name);
-        displaySection(result[i].name, sectionIndex);
         var repoDescription = getDescription(result[i].name);
+        displaySection(result[i].name, sectionIndex);
         if(sectionIndex == 2) {
             sectionIndex = 0;
         } else {
@@ -49,7 +49,7 @@ function displaySection(repoName, index) {
     document.getElementById(repoName + "Container").innerHTML = '&nbsp;';
 
     if(index == 0) {
-        html += '<section><h1><a class="underline" target="_blank" href="https://github.com/esther588/' + repoName + '">' + repoName + '</a></h1></section>';
+        html += '<section><h1><a class="underline" target="_blank" href="https://github.com/esther588/' + repoName + '">' + repoName + '</a><br>' + '<br></h1></section>';
     } else if(index == 1) {
         html += '<section class="two"><h1><a class="underline" target="_blank" href="https://github.com/esther588/' + repoName + '">' + repoName + '</a></h1></section>';
     } else if(index == 2) {
