@@ -18,7 +18,7 @@ async function func() {
     for (let i in result) {
         createElement(result[i].name);
         var repoDescription = getDescription(result[i].name);
-        displaySection(result[i].name, sectionIndex);
+        displaySection(result[i].name, sectionIndex, repoDescription);
         if(sectionIndex == 2) {
             sectionIndex = 0;
         } else {
@@ -42,7 +42,7 @@ async function getDescription(repoName) {
     return result.description;
 }
 
-function displaySection(repoName, index) {
+function displaySection(repoName, index, repoDesc) {
 
     html = '';
 
