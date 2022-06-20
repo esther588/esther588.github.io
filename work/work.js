@@ -53,7 +53,7 @@ function displaySection(repoName, index, repoDesc) {
     } else if(index == 1) {
         html += '<section class="two"><h1 class="dark"><a class="underline" target="_blank" href="https://github.com/esther588/' + repoName + '">' + repoName + '</a><br>' + repoDesc + '<br></h1></section>';
     } else if(index == 2) {
-        html += '<section class="three"><h1><a class="underline" target="_blank" href="https://github.com/esther588/' + repoName + '">' + repoName + '</a><br>' + repoDesc + '<br></h1></section>';
+        html += '<section class="three"><h1 class="light"><a class="underline" target="_blank" href="https://github.com/esther588/' + repoName + '">' + repoName + '</a><br>' + repoDesc + '<br></h1></section>';
     }
 
     document.getElementById(repoName + "Container").innerHTML = html;
