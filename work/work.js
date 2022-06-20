@@ -49,7 +49,7 @@ function displaySection(repoName, index, repoDesc) {
     document.getElementById(repoName + "Container").innerHTML = '&nbsp;';
 
     if(index == 0) {
-        html += '<section><h1><a class="underline" target="_blank" href="https://github.com/esther588/' + repoName + '">' + repoName + '</a><br>' + repoDesc + '<br></h1></section>';
+        html += '<section><h1><a style="color: #92BFB1;" class="underline" target="_blank" href="https://github.com/esther588/' + repoName + '">' + repoName + '</a><br>' + repoDesc + '<br></h1></section>';
     } else if(index == 1) {
         html += '<section class="two"><h1><a class="underline" target="_blank" href="https://github.com/esther588/' + repoName + '">' + repoName + '</a><br>' + repoDesc + '<br></h1></section>';
     } else if(index == 2) {
