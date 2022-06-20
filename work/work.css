@@ -153,6 +153,10 @@ h1 span {
     color: #92BFB1 !important;
 }
 
+.dark {
+    color: #82aea0 !important;
+}
+
 .underline {
   text-decoration: underline;
 }
