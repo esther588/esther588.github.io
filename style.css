@@ -29,7 +29,6 @@ header {
 
 #services {
     background-color: #b2d2c8;
-    padding: 50px 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
