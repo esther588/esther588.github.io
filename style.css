@@ -8,11 +8,12 @@
 
 body {
     margin: 0;
+    background: #b2d2c8;
 }
 
 header {
     height: 80px;
-    background-color: #fafafa;
+    background-color: #ffffff;
     padding: 0 60px 0 100px;
     display: flex;
     justify-content: space-between;
