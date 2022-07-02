@@ -44,9 +44,9 @@ h2 {
     margin-bottom: 50px;
 }
 
-.service, .card {
+.service {
     background-color: white;
-    width: 500px;
+    width: 650px;
     text-align: center;
     padding: 40px;
     display: flex;
