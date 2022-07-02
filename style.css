@@ -38,6 +38,10 @@ body {
     cursor: pointer;
 }
 
+.center-container {
+    text-align: center;
+}
+
 .container {
     display: grid;
     grid-template-columns: auto auto auto;
