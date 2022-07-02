@@ -15,11 +15,9 @@ body {
 header {
     height: 80px;
     background-color: #ffffff;
-    padding: 0 60px 0 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
     position: sticky;
     top: 0;
     box-shadow: 2px 0 20px 0 rgba(0,0,0,0.1);
