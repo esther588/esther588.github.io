@@ -74,7 +74,6 @@ h2 {
 
     .container {
         display: grid;
-        grid-template-columns: auto;
-        grid-row-gap: 50px;
+        text-align: center;
     }
 }
