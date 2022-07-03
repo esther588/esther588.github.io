@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Oswald:200,400|Playfair+Display:400,400i");
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
 * {
     box-sizing: border-box;
-    font-family: "Abril Fatface", serif;
-    font-size: 1.3em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
     scroll-behavior: smooth;
 }
 
@@ -61,10 +61,6 @@ header {
     text-align: center;
 }
 
-h3 {
-    font-size: 16px;
-}
-
 @media screen and (max-width: 700px) {
     header {
         padding: 0 40px 0 20px;
@@ -74,4 +70,8 @@ h3 {
         display: grid;
         text-align: center;
     }
+}
+
+h3 {
+  font-size: 16px;
 }
